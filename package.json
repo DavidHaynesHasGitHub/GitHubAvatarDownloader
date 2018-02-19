@@ -1,0 +1,25 @@
+{
+  "name": "githubavatar",
+  "version": "1.0.0",
+  "description": "Github Avatar Downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "GitHubAvaDwnld"
+  },
+  "keywords": [
+    "github",
+    "avatar",
+    "downloader",
+    "lighthouse labs",
+    "project"
+  ],
+  "author": "David Haynes",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
