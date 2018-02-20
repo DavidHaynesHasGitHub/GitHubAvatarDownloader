@@ -17,12 +17,21 @@ function getRepoContributors(repoOwner, repoName, callback) {
   request(options, function(err, res, body) {
     callback(err, body);
       var avaURL = JSON.parse(body)
-      for (element of avaURL)
-      console.log(element['avatar_url'])
+
   });
 }
-
-
 getRepoContributors("jquery", "jquery", function(err, result){
 
 });
+
+function downloadImageByURL(url, filepath) {
+    request.get(url, function(err, res, body){
+        if(err) {
+            throw err;
+        }
+        console.log("Downloading..." + url);
+    })
+    .pipe(fs.createWriteStream(filepath));
+}
+
+downloadImageByURL("https://avatars2.githubusercontent.com/u/2741?v=3&s=466", "avatars/kvirani.jpg")
