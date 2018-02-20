@@ -3,6 +3,7 @@ var secret = require('./secret');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 
+
 function getRepoContributors(repoOwner, repoName, callback) {
     var options = {
     url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
@@ -48,6 +49,5 @@ var callback = function (error, response, body) {
         throw err;
     }
 }
-var repoOwner = 'jQuery'
-var repoName = 'jQuery'
-getRepoContributors(repoOwner, repoName, callback)
+
+getRepoContributors(process.argv[2], process.argv[3], callback)
